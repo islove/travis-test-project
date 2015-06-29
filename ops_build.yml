@@ -1,0 +1,26 @@
+language: java
+version: oraclejdk7
+before_script:
+   - echo ' before_script'
+install_script:
+   - whereis java
+   - echo 'install_script'
+script:
+   - mvn install -Dmaven.test.skip=true -B
+after_success:
+   - mkdir webdeploy
+   - cp web/target/web-1.0-SNAPSHOT.war webdeploy/
+   - cp web/src/main/script/start.sh.etpl webdeploy/
+   - mkdir webdeploy/logs
+   - mkdir webdeploy/conf
+   - cp web/src/main/conf/* webdeploy/conf/
+   - cp web/appspec.yml webdeploy/
+after_failure:
+   - echo 'after_failure'
+outfile:
+   - webdeploy/
+notifications: 
+   email:
+      - yunfeng.wu@ele.me
+branch:
+   master: alpha_stable
