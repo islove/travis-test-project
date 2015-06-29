@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <move todir="/projects/demojava/web/target/web-1.0-SNAPSHOT/">
+    <fileset dir="/projects/demojava/web/target/classes/">
+      <include name="Runner.class"/>
+    </fileset>
+  </move>
+</target>
+</project>
