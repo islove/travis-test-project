@@ -4,7 +4,7 @@ before_script:
    - echo 'before_script'
 install_script:
    - whereis java
-   - echo 'install_script'
+   - echo ' install_script'
 script:
    - mvn install -Dmaven.test.skip=true -B
 after_success:
