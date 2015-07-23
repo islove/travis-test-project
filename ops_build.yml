@@ -24,3 +24,4 @@ notifications:
       - yunfeng.wu@ele.me
 branch:
    master: alpha_stable
+   dev: alpha_stable
