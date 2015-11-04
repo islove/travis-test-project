@@ -35,7 +35,7 @@ public class QueryRes {
 	//@Eloging(ElogingConstants.GITLAB_PUSH_WEBHOOK)
 	public String gitlabPush() throws Exception{
     	String file=System.getProperty("CONF_DIR");
-    	System.out.println("conf_dir:" + file);
+    	System.out.println("conf_dir is : " + file);
     	return "{status:\"runing\",conf:\""+readFileByLines(file + "/app.conf")+"\"}";
 	}
 	
@@ -46,6 +46,7 @@ public class QueryRes {
         	return "app.conf 文件不存在";
         }
         BufferedReader reader = null;  
+        System.out.println("ok");
         StringBuilder sb = new StringBuilder();
         try {  
             reader = new BufferedReader(new FileReader(file));  
