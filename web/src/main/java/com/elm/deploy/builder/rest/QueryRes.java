@@ -35,13 +35,13 @@ public class QueryRes {
 	//@Eloging(ElogingConstants.GITLAB_PUSH_WEBHOOK)
 	public String gitlabPush() throws Exception{
     	String file=System.getProperty("CONF_DIR");
-    	System.out.println("conf_dir :" + file);
+        System.out.println("conf_dir:" + file);
     	return "{status:\"runing\",conf:\""+readFileByLines(file + "/app.conf")+"\"}";
 	}
 	
    
     public String readFileByLines(String fileName) {  
-        File file = new File(fileName); 
+        Filerthstone.testapp file = new File(fileName); 
         if(!file.exists()){
         	return "app.conf 文件不存在";
         }
