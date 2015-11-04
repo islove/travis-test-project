@@ -35,7 +35,7 @@ public class QueryRes {
 	//@Eloging(ElogingConstants.GITLAB_PUSH_WEBHOOK)
 	public String gitlabPush() throws Exception{
     	String file=System.getProperty("CONF_DIR");
-    	System.out.println("conf_dir:" + file);
+    	System.out.println("conf_dir :" + file);
     	return "{status:\"runing\",conf:\""+readFileByLines(file + "/app.conf")+"\"}";
 	}
 	
