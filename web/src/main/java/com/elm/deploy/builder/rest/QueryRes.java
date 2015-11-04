@@ -41,7 +41,7 @@ public class QueryRes {
 	
    
     public String readFileByLines(String fileName) {  
-        Filerthstone.testapp file = new File(fileName); 
+        File file = new File(fileName); 
         if(!file.exists()){
         	return "app.conf 文件不存在";
         }
