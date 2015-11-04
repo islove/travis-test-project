@@ -25,4 +25,4 @@ notifications:
       - yunfeng.wu@ele.me
 branch:
    master: alpha_stable
-   tag-0.0.1: null
+   patchtest: null
