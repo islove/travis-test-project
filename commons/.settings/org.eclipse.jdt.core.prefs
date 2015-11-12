@@ -1,9 +1,9 @@
-#Fri May 15 19:07:46 WITA 2015
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
 eclipse.preferences.version=1
 encoding/src/main/java=utf-8
-org.eclipse.jdt.core.compiler.source=1.7
-encoding/src/test/resources=utf-8
 encoding/src/main/resources=utf-8
 encoding/src/test/java=utf-8
+encoding/src/test/resources=utf-8
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
 org.eclipse.jdt.core.compiler.compliance=1.7
+org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
+org.eclipse.jdt.core.compiler.source=1.7
