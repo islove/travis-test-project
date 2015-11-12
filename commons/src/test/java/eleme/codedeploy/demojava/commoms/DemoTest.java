@@ -14,7 +14,7 @@ public class DemoTest {
         System.out.println("junit test1 is executed."); 
         Files files = new Files();
         files.setDestination("dog.liao");
-        assertTrue("Result 为true ", "dog.liao".equals(files.getDestination())); 
+        assertTrue("test1 result:", "dog.liao".equals(files.getDestination())); 
     }  
 	
 	@Test  
@@ -22,6 +22,6 @@ public class DemoTest {
         System.out.println("junit test2 is executed."); 
         ValidateService validateService = new ValidateService();
         validateService.setLocation("dog.liao");
-        assertTrue("Result 为true ", "dog.liao".equals(validateService.getLocation())); 
+        assertTrue("test1 result", "dog.liao".equals(validateService.getLocation())); 
     }  
 }
