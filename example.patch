@@ -1,0 +1,65 @@
+diff --git a/commons/src/main/java/eleme/codedeploy/demojava/commons/Files.java b/commons/src/main/java/eleme/codedeploy/demojava/commons/Files.java
+index ddcb812..2e72acc 100644
+--- a/commons/src/main/java/eleme/codedeploy/demojava/commons/Files.java
++++ b/commons/src/main/java/eleme/codedeploy/demojava/commons/Files.java
+@@ -1,6 +1,8 @@
+ package eleme.codedeploy.demojava.commons;
+ 
+ import java.util.List;
++import java.util.regex.Matcher;
++import java.util.regex.Pattern;
+ 
+ /**
+  * Created by ww on 15/4/1.
+@@ -24,4 +26,15 @@ public class Files {
+     public void setDestination(String destination) {
+         this.destination = destination;
+     }
++    
++    public boolean isOk(){
++		String pattern = "(master|dev)";
++		String branchName = "dev";
++		Pattern p=Pattern.compile(pattern);
++		Matcher m=p.matcher(branchName);
++	    
++		System.out.println(m.matches());
++		System.out.println(m.find());
++    	return true;
++    }
+ }
+diff --git a/commons/src/test/java/eleme/codedeploy/demojava/commoms/DemoTest.java b/commons/src/test/java/eleme/codedeploy/demojava/commoms/DemoTest.java
+index 5763348..498bc69 100644
+--- a/commons/src/test/java/eleme/codedeploy/demojava/commoms/DemoTest.java
++++ b/commons/src/test/java/eleme/codedeploy/demojava/commoms/DemoTest.java
+@@ -8,11 +8,12 @@ import eleme.codedeploy.demojava.commons.Files;
+ import eleme.codedeploy.demojava.commons.ValidateService;
+ 
+ public class DemoTest {
+-	
++	Files files = new Files();
++	ValidateService validateService = new ValidateService();
+ 	@Test  
+     public void test1(){  
+         System.out.println("junit test1 is executed."); 
+-        Files files = new Files();
++        
+         files.setDestination("dog.liao");
+         assertTrue("test1 result:", "dog.liao".equals(files.getDestination())); 
+     }  
+@@ -20,8 +21,14 @@ public class DemoTest {
+ 	@Test  
+     public void test2(){  
+         System.out.println("junit test2 is executed."); 
+-        ValidateService validateService = new ValidateService();
+         validateService.setLocation("dog.liao");
+-        assertTrue("test1 result", "dog.liao".equals(validateService.getLocation())); 
++        assertTrue("test2 result", "dog.liao".equals(validateService.getLocation())); 
+     }  
++	
++	@Test
++	public void test3(){
++        System.out.println("junit test3 is executed."); 
++       
++        assertTrue("test3 result", files.isOk()); 
++	}
+ }
