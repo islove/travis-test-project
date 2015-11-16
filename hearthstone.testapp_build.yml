@@ -26,3 +26,4 @@ notifications:
 branch:
    master: alpha_stable
    patchtest: null
+   patchtest-1: null
