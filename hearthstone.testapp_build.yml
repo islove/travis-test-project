@@ -1,5 +1,5 @@
 language: java
-version: oraclejdk7
+version:oraclejdk7
 os:centos7
 before_script:
    - echo 'before_script'
