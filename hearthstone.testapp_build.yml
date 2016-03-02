@@ -1,4 +1,4 @@
-language: java
+language: java1
 version: oraclejdk7
 os: centos7
 before_script:
@@ -26,4 +26,4 @@ notifications:
 branch:
    master: alpha_stable
    patchtest: null
-   patchtest-0: null
+   patchtest-1: null
